@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);*/
 /*
 Theme Name: Less
 Theme URI: http://lessmade.com/themes/less
@@ -332,11 +332,18 @@ input,
 select {
   padding: 0;
   margin: 0;
-  background: #ffffff;
+  background: #fefefe; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fefefe 0%, #cccccc 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #fefefe 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fefefe 0%,#cccccc 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fefefe 0%,#cccccc 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #fefefe 0%,#cccccc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 26.64px;
-  font-size: 18px;
-  font-size: 1.8rem;
+  line-height: 31px;
+  font-size: 19px;
+  font-size: 1.9rem;
 }
 /* typography
 -------------------------------------------------------------- */
@@ -348,7 +355,8 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: "Arvo", Georgia, serif;
+  /*font-family: "Arvo", Georgia, serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1 {
   line-height: 71.03999999999999px;
@@ -432,7 +440,7 @@ pre {
 }
 /* Links */
 a {
-  color: #007998;
+  color: green;
   -webkit-transition: color 0.25s ease-in-out;
   -moz-transition: color 0.25s ease-in-out;
   -o-transition: color 0.25s ease-in-out;
@@ -464,9 +472,12 @@ a:active {
 /* Header
 -------------------------------------------------------------- */
 header {
-  padding: 20px 0;
-  background: transparent;
-  margin: 20px auto;
+  position: fixed;
+  z-index: 10000;
+  background: #ffffff;
+  background: rgba(255,255,255,0.8);
+  width: 100%;
+  padding: 0;
 }
 header .gravatar {
   overflow: hidden;
@@ -479,29 +490,37 @@ header .gravatar {
   float: right;
 }
 header #brand {
-  float: left;
-  width: 80%;
-  margin-top: 22px;
+  width: 100%;
 }
 header #brand h1 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
-  color: #565656;
+  color: #888888;
   line-height: 23.68px;
-  font-size: 16px;
   font-size: 1.6rem;
   margin: 0;
-  padding: 0;
-  text-transform: uppercase;
+  padding: 0 5px;
 }
 header #brand h1 a {
-  color: #565656;
+  font-size: 58px;
+  letter-spacing: -1px;
+  color: green;
   text-decoration: none;
+  position: absolute;
+  top: 4px;
+  right: 0;
 }
 header #brand h1 span {
+  position: absolute;
+  top: 33px;
+  right: 35px;
+  resize: 35px;
+  display: block;
+  font-size: 13px;
   font-weight: 200;
   color: #888888;
   text-transform: lowercase;
+  text-align: right;
 }
 header nav {
   float: left;
@@ -519,10 +538,13 @@ header nav ul li a {
   font-size: 14px;
 }
 .container {
-  max-width: 720px;
-  padding: 20px;
+  max-width: 960px;
+  padding: 0 30px 20px;
   margin: 0 auto;
   position: relative;
+}
+#content {
+  padding-top: 130px;
 }
 /* Posts/Articles
 -------------------------------------------------------------- */
@@ -530,25 +552,29 @@ article {
   background: transparent;
   padding: 0;
   margin-bottom: 80px;
-  border-bottom: 1px solid #dddddd;
+  /*border-bottom: 1px solid #dddddd;*/
 }
 article .title {
-  color: #404040;
+  color: #666;
+  border-bottom: 1px solid #ccc;
   line-height: 56.24px;
   font-size: 38px;
   font-size: 3.8rem;
-  font-weight: 700;
+  font-weight: 300;
 }
 article .title a {
   text-decoration: none;
-  color: #404040;
+  color: #666;
+  display: block;
+  margin-bottom: -14px;
 }
 article .title a:hover {
-  color: #007998;
+  color: green;
 }
 article .post-meta {
   margin-bottom: 40px;
   font-size: 14px;
+  text-align: right;
 }
 article .post-meta a {
   color: #888888;
@@ -562,12 +588,14 @@ article .the-content a {
   text-decoration: none;
 }
 article .the-content p {
+  font-family: Georgia, serif;
   color: #787878;
+  text-align: justify;
 }
-article .the-content img {
+/*article .the-content img {
   width: 100%;
   height: auto;
-}
+}*/
 article .meta {
   line-height: 14.8px;
   font-size: 10px;
