@@ -451,7 +451,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: rgba(0, 121, 152, 0.5);
+  color: #666;
 }
 /* Alignment */
 .alignleft {
@@ -613,6 +613,21 @@ article .meta .post-categories {
 article .meta .post-categories li {
   display: inline-block;
   margin-right: 10px;
+}
+article .read-this-link {
+  float: right;
+  background: #ccc;
+  color: #999;
+  text-align: center;
+  margin-top: -18px;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 16px;
+}
+article .read-this-link:hover {
+  background: green;
+  color: #fefefe;
 }
 /* Page loop styling */
 .page article {
