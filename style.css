@@ -333,13 +333,13 @@ select {
   padding: 0;
   margin: 0;
   background: #fefefe; /* Old browsers */
-  background: -moz-linear-gradient(top,  #fefefe 0%, #cccccc 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top,  #fefefe 0%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top,  #fefefe 0%,#cccccc 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top,  #fefefe 0%,#cccccc 100%); /* IE10+ */
-  background: linear-gradient(to bottom,  #fefefe 0%,#cccccc 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+  background: -moz-linear-gradient(top,  #fefefe 0%, #dddddd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #fefefe 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #fefefe 0%,#dddddd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #fefefe 0%,#dddddd 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #fefefe 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 31px;
   font-size: 19px;
@@ -440,7 +440,7 @@ pre {
 }
 /* Links */
 a {
-  color: green;
+  color: #008000;
   -webkit-transition: color 0.25s ease-in-out;
   -moz-transition: color 0.25s ease-in-out;
   -o-transition: color 0.25s ease-in-out;
@@ -504,7 +504,7 @@ header #brand h1 {
 header #brand h1 a {
   font-size: 58px;
   letter-spacing: -1px;
-  color: green;
+  color: #008000;
   text-decoration: none;
   position: absolute;
   top: 4px;
@@ -569,7 +569,7 @@ article .title a {
   margin-bottom: -14px;
 }
 article .title a:hover {
-  color: green;
+  color: #008000;
 }
 article .post-meta {
   margin-bottom: 40px;
@@ -583,9 +583,8 @@ article .post-meta a {
 article .post-meta a:hover {
   color: rgba(136, 136, 136, 0.5);
 }
-article .the-content a {
-  font-weight: 900;
-  text-decoration: none;
+article .the-content p a {
+  text-decoration: underline;
 }
 article .the-content p {
   font-family: Georgia, serif;
@@ -614,6 +613,7 @@ article .meta .post-categories li {
   display: inline-block;
   margin-right: 10px;
 }
+/*
 article .read-this-link {
   float: right;
   background: #ccc;
@@ -626,9 +626,9 @@ article .read-this-link {
   line-height: 16px;
 }
 article .read-this-link:hover {
-  background: green;
+  background: #008000;
   color: #fefefe;
-}
+} */
 /* Page loop styling */
 .page article {
   border-bottom: none;

@@ -80,10 +80,7 @@
 						</div><!--/post-meta -->
 						
 						<div class="the-content">
-							<?php the_excerpt( 'Continue...' ); ?>
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-this-link">
-								Read<br />This
-							</a>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_excerpt( 'Continue...' ); ?></a>
 							
 							<?php wp_link_pages(); ?>
 						</div><!-- the-content -->
