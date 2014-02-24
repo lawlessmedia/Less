@@ -45,6 +45,18 @@
 		
 </header><!-- #masthead .site-header -->
 
+<div class="hero-image">
+	<?php
+		$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+?>
+	<?php
+	//if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+	//  the_post_thumbnail();
+	//}
+	?>
+	<div class="hero-image-wrap" style="background-image: url('<?php echo $src[0]; ?>');"></div>
+</div>
+
 <div class="container">
 
 	<div id="primary">

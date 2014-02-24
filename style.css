@@ -1,11 +1,11 @@
 /*@import url(http://fonts.googleapis.com/css?family=Arvo:400,700);*/
 /*
-Theme Name: Less
-Theme URI: http://lessmade.com/themes/less
-Author: Jared Erickson
-Author URI: http://jarederickson.com
-Description: A super simple theme that can be customized using LESS variables
-Version: 1.1
+Theme Name: Phoresia
+Theme URI: http://phoresia.org
+Author: phoresia.org
+Author URI: http://phoresia.org
+Description: Customized theme based on Less
+Version: 1.2
 License: GNU General Public License
 
 */
@@ -544,7 +544,7 @@ header nav ul li a {
   position: relative;
 }
 #content {
-  padding-top: 130px;
+  padding-top: 345px;
 }
 /* Posts/Articles
 -------------------------------------------------------------- */
@@ -738,6 +738,33 @@ html[xmlns] .clearfix {
 * html .clearfix {
   height: 1%;
 }
+/* Custom styles for Phoresia
+-------------------------------------------------------------- */
+.hero-image {
+  position: fixed;
+  width: 100%;
+  max-height: 420px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  /* styles for fading opacity */
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+.hero-image-hide {
+  opacity: 0.1; 
+}
+.hero-image-wrap {
+  width: 100%;
+  height: 420px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 	
+}
+
 /* Media Queries for responsivenessssssss
 -------------------------------------------------------------- */
 @media (max-width: 767px) {
